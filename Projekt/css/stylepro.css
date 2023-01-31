@@ -1,0 +1,54 @@
+/* CSS Document */
+body {
+background-color: #ccf;
+}
+a:hover {
+  color:darkblue; filter: opacity(40%);
+}
+a:visited {
+  color:green;
+}
+a:active {
+  color:red;
+}
+
+
+.all{
+  margin: auto;
+  width: 1600px;
+}
+.a{
+  background-color: #fcf;
+  background-image: url("../image/erbsl.png");
+  width: 1600px;
+  height: 200px;
+
+}
+.b{
+  background-color: #cfc;
+  width: 1600px;
+   height: 50px;
+   text-align: center;
+}
+.c{
+  background-color: #fcc;
+  width: 250px;
+  height: 500px;
+  float: left;
+
+}
+.d{
+  background-color: #ffc;
+  width: 1350px;
+  height: 500px;
+  margin-left: 250px;
+  overflow: auto;
+}
+.e{
+  background-color: #cff;
+  width: 1600px;
+  height: 150px;
+  text-align: center;
+  padding-top: 15px;
+
+}
