@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CPU - Pawelec II.B</title>
+  </head>
+  <style media="screen">
+    body {
+      background-color: 	#FAFAD2;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+    h1 {
+      text-align: center;
+    }
+    hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 1px;
+    }
+    p {
+      font-size: 18px;
+    }
+    ul {
+      list-style-type: none;
+      width: 500px;
+      overflow: hidden;
+      border: 1px solid #e7e7e7;
+      background-color: rgb(255,255,153);
+       margin-left: auto;
+        margin-right: auto;
+    }
+
+    li {
+      float: left;
+
+    }
+
+    li a {
+      display: block;
+      color: #666;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: rgb(204,255,255);
+    }
+
+    li a.active {
+      color: white;
+      background-color: rgb(0,102,255);
+    }
+  </style>
+  <body>
+    <h1>Procesor (CPU)</h1>
+    <hr>
+    <ul>
+      <li><a href="index.html" class="active">Domov</a></li>
+      <li><a href="pods\gpu.html">GPU</a></li>
+      <li><a href="pods\cache.html">Cache</a></li>
+      <li><a href="pods\risc.html">RISC</a></li>
+      <li><a href="pods\cisc.html">CISC</a></li>
+      <li><a href="pods\micp.html">Mikroprocesor</a></li>
+
+    </ul>
+    <h2>Central Processing Unit</h2>
+    <p>CPU (skr. z angl. central processing unit, často prekladané ako centrálna procesorová jednotka) je hlavný procesor počítača. Interpretuje, vykonáva alebo spracúva inštrukcie alebo dáta programu vo forme strojového kódu. Dnes sú centrálne procesorové jednotky takmer vždy realizované vo forme mikroprocesora. <br>
+
+CPU sa v slovenčine oficiálne označuje ako procesor základnej jednotky alebo skrátene základná jednotka alebo procesor (tiež: procesor ústrednej jednotky, centrálny procesor, ústredný procesor). <br>
+
+Osobný počítač (PC) obsahuje obvykle len jednu CPU. V súčasnosti sa však vyskytujú aj riešenia, ktoré implementujú dve alebo viac nezávislých CPU do jednej základnej dosky. Existujú superpočítače s viacerými integrovanými procesormi, ktoré vzájomne spolupracujú (pozri symetrický multiprocesing).</p>
+<embed src="obr/cpu1.jpg">
+  <h2>Ako procesor funguje</h2>
+  <p>Princíp všetkých dnešných výpočtových systémov, a teda i procesora, je založený na spracovaní binárnych operácií. Binárna, čiže dvojková sústava, má samozrejme len dva stavy, 0 a 1, ktoré je možné v procesore vďaka ich jednoduchosti ľahko reprezentovať napäťovými úrovňami.
+
+V tento moment sa prenášame na nižšie úrovne elektronických zapojení. Základnou stavebnou jednotkou procesora je tranzistor zapojený ako spínač. Jeho úlohou je meniť stav medzi logickou nulou a jednotkou. Jeden samotný tranzistor by príliš výpočtov realizovať nemohol, preto ich v dnešných procesoroch nájdeme miliardy, vďaka čomu je možné vykonávať aj najzložitejšie operácie.
+
+Jednotlivé operácie dohromady skladajú inštrukcie, ktorých zväzky sa nazývajú programy. Program je spracovávaný sekvenčne, čo znamená, že jeho inštrukcie procesor vykonáva jednu po druhej v takzvaných inštrukčných cykloch.</p>
+<embed  src="obr/ABasicComputer.gif" >
+<h2>Čo je frekvencia procesora</h2>
+<p>Ak funkčnosť procesora veľmi zjednodušíme, môžeme tvrdiť, že ide iba o početnú sústavu tranzistorov, ktoré veľmi rýchlo menia svoje stavy podľa toho, ako to vykonávané operácie vyžadujú. Interval medzi dvoma impulzmi z oscilátora sa nazýva frekvenčný cyklus. V takomto čase je procesor schopný svoje tranzistory prepnúť do jednotky a potom späť do nuly. O zmene stavu z nuly do jednotky referujú ako o nábežnej hrane a o zmene jednotky na nulu ako o hrane zostupnej. Množstvo týchto cyklov za jednu sekundu sa nazýva frekvencia procesora. Jednotkou je Hertz (Hz), a keďže dnešné procesory vykazujú frekvencie v rádoch miliárd Hertzov, používame v tomto spojení často predponu giga (GHz), prípadne mega (MHz, milión Hertzov). Frekvencia sa tiež často označuje ako kmitočet či takt procesora. <br>
+<embed src="obr/procesor-frekvencny-cyklus.jpg"> <br>
+Frekvencia je jedným z hlavných faktorov, ktoré ovplyvňujú výkon procesora. Zjednodušený vzťah hovorí, že čím vyššia frekvencia, tým vyšší výkon. Toto tvrdenie však musíme brať s rezervou. Ak sa dvaja inak úplne rovnaké procesory líšia iba frekvenciou, ten s vyššou bude skutočne výkonnejší. Celkový výkon procesora však ovplyvňujú aj iné faktory, ako napríklad jeho architektúra, počet jadier a i., iba vyššia frekvencie teda výkonnostnú prevahu nezaistí.</p>
+  <h2>Jadrá CPU</h2>
+  <p>O jadrách sa dá s čistým svedomím prehlásiť, že ide o samostatné výpočtové jednotky a viacjadrový procesor možno považovať za vysoko integrované zapojenie viac jednojadrových. Jadrá sú na sebe výpočtovo nezávislé, vďaka čomu je procesor schopný v jednej chvíli spracovávať niekoľko rôznych inštrukcií a obsluhovať tak niekoľko programov naraz. Táto schopnosť je kľúčová v otázke účinného multitaskingu. V dnešnej dobe dokáže viac jadier využiť čím ďalej väčšie množstvo aplikácií, vrátane hier. <br>
+  <embed src="obr/procesor-kaby-lake.jpg" ><br>
+  Z pohľadu operačného systému sa inštrukcie delia na vlákna, ktoré sú voči sebe spracovávané paralelne, čo pri efektívnom naprogramovaní danej aplikácie umožňuje ich rýchlejšiu realizáciu. Kým pred niekoľkými rokmi neprišla firma Intel s technológiou Hyper-Threading, bolo štandardom, že jedno procesorové jadro mohlo spracovávať iba jedno softvérové vlákno. Teraz je veľká časť procesorov vybavená technológiou, ktorá umožňuje, aby jedno fyzické jadro spracovávalo vlákna dve. Z toho dôvodu sa o týchto procesorových vláknach hovorí aj ako o virtuálnych alebo logických jadrách. Dôležité je poznamenať, že procesorové vlákna výkonnostne nezastupujú plnohodnotné fyzické jadrá, pretože s nimi zdieľa hardvérové ​​prostriedky, čím je ich výkon obmedzený. Hoci sa takáto technológia považuje za efektívnu, nemôžeme tvrdiť, že dvojjadrový procesor so štyrmi vláknami môže byť rovný plnohodnotnému štvorjadrovému procesoru.</p>
+  <h2>Socket procesoru</h2>
+  <p>Socket čiže pätica je jeden zo základných parametrov pri výbere procesora vo vzťahu k základnej doske. Ide o konektor, do ktorého sa puzdro procesora vloží a zamkne. Na označenie je treba dbať, a ak sa socket dosky a procesora nezhoduje, nielenže spolu nebudú tieto dva komponenty pracovať, ale nepodarí sa vám ich ani prepojiť. Môžeme hovoriť o dvoch hlavných vyhotoveniach socketov. Rozšírenejším LGA, ktorý spája dosku s procesorom kontaktnými plochami a dnes ustupujúcim PGA, ktorého princíp spočíva v uzamykaní procesora pomocou pinov presne pasujú do otvorov v pätici. Jednotlivé sockety sa od seba však líšia hlavne samotným označením, ktoré je popravde všetko, čo vás musí pri výbere procesora zaujímať. Najaktuálnejšou päticou Intelu je LGA1151 a v prípade AMD je to AM4. Ak by ste mali záujem o procesor zo segmentu HEDT, nielenže sú tieto čipy často založené na odlišných architektúrach, často disponujú tiež iným socketom. AMD pre svoje procesory Threadripper vytvorilo päticu TR4, zatiaľ čo Intel s mnohoročnými skúsenosťami iba aktualizoval staršie HEDT pätice a novú pomenoval LGA2066.
+   <br><embed src="obr/socket-lga.jpg" ></p>
+     <h2>Výrobcovia</h2>
+     <p>Na svete existujú dvaja hlavný výrobcovia desktopových procesorov, ktorí si delia takmer sto percent tohto trhu. Prvým je Intel, druhým AMD. Obaja svoje produkty delia na rady a konkrétne modelové označenia. Rady slúžia k hrubšiemu rozdeleniu celej ponuky podľa účelu a výkonu procesora (a samozrejme tiež podľa ceny). <br>
+     Výhodou procesorov Intel je oproti konkurencii prítomnosť integrovaného grafického jadra pri všetkých modeloch (okrem serverových Xeonov), čo z nich robí oveľa zaujímavejší produkt z pohľadu zákazníka, ktorý nepotrebuje samostatnú grafickú kartu. <br>
+     <embed src="obr/loga-amd-a-intel.jpg" > <br>
+       AMD ako výrobca procesorov si pred nejakou dobou nechalo svoju konkurenciu stelesnenou Intelom technologicky utiecť, v dôsledku čoho tiež klesol jeho podiel na trhu. Dlhé roky teda platilo, že pre technologicky vyspelý a výkonný procesor bolo nutné zamieriť do modrej stajne. To sa však teraz mení, pretože AMD podporilo vývoj a prinieslo tento rok na trh procesory Ryzen, ktoré vďaka 14nm výrobnému procesu, ktorým sú procesory Intel už nejakú dobu vyrábané, priniesli na trh zdravú konkurenciu. Procesory boli pomenované príhodne, ako priama odpoveď na rady Intelu, teda Ryzen 3, 5 a 7.
+     </p>
+
+
+  </body>
+</html>

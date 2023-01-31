@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    body {
+      background-color: 	#FAFAD2;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+    h1 {
+      text-align: center;
+    }
+    hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 1px;
+    }
+    p {
+      font-size: 18px;
+    }
+    ul {
+      list-style-type: none;
+      width: 500px;
+      overflow: hidden;
+      border: 1px solid #e7e7e7;
+      background-color: rgb(255,255,153);
+       margin-left: auto;
+        margin-right: auto;
+    }
+
+    li {
+      float: left;
+
+    }
+
+    li a {
+      display: block;
+      color: #666;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: rgb(204,255,255);
+    }
+
+    li a.active {
+      color: white;
+      background-color: rgb(0,102,255);
+    }
+  </style>
+  <body>
+    <h1>Mikroprocesor</h1>
+    <hr>
+    <ul>
+      <li><a href="../index.html" >Domov</a></li>
+      <li><a href="gpu.html">GPU</a></li>
+      <li><a href="cache.html">Cache</a></li>
+      <li><a href="risc.html">RISC</a></li>
+      <li><a href="cisc.html">CISC</a></li>
+      <li><a href="pods\micp.html" class="active">Mikroprocesor</a></li>
+
+    </ul>
+    <h2>Mikroprocesor</h2>
+    <p>Mikroprocesor (skrátene µP či uP) je druh procesora, ktorý je ako celok integrovaný do jediného integrovaného obvodu. Procesor býva súčasťou viacerých elektronických zariadení. Vzhľadom na to, že softvérom (postupnosťou inštrukcií, ktoré procesor spracúvava) je možné jednoduchšie realizovať aj veľmi zložité elektronické obvody, a vzhľadom na neustále klesajúce ceny a rastúce možnosti mikroprocesorov sa používajú takmer v každom zložitejšom elektronickom zariadení (rádiá, počítače, tlačiarne, pračky, chladničky, televízory a pod.).
+
+Hlavné druhy mikroprocesorov:<br>
+<li>CPU (Central Processing Unit - procesor základnej jednotky počítača) - hlavný (mikro)procesor počítača (v minulosti však CPU nemala vždy podobu mikroprocesora)</li><br>
+<li>GPU (grafický procesor) – hlavný mikroprocesor grafickej karty</li><br>
+<li>APU (Accelerated Processing Unit) - CPU a GPU v jednom puzdre</li><br>
+<li>matematický procesor (FPU), označovaný aj ako matematický koprocesor, dnes je väčšinou integrovaný s CPU v jednom puzdre.</li><br>
+<li>zvukový procesor</li> <br> <br>
+Pred vynájdením mikroprocesorov boli elektronické CPU vyrobené z oddelených TTL integrovaných obvodov; predtým z jednotlivých tranzistorov; a ešte skôr založené na elektrónkach. Existovali návrhy jednoduchých počítacích strojov založených na mechanických súčiastkach ako ozubené kolesá, hriadele, páky, tinkertoys atď. Leonardo Da Vinci navrhol jeden z nich, hoci ho nebolo možné zostaviť výrobnými postupmi jeho doby.
+<br>
+Je známe, že evolúcia mikroprocesorov doteraz sledovala Moorov zákon týkajúci sa stáleho zvyšovania výkonu v čase. Tento zákon hovorí, že sa „komplexnosť integrovaného obvodu s ohľadom na minimálnu cenu komponentu zdvojnásobí každých približne 18 mesiacov“, čo sa vo všeobecnosti aj prekvapivo dialo od skorých 70. rokov. Od biednych začiatkov ako mozog kalkulačiek viedol zvyšujúci sa výkon k dominancii mikroprocesorov v každej inej forme počítača; každý systém od najväčšieho mainframe (sálový počítač) po najmenší handheld dnes v jadre používa mikroprocesor. <br>
+<embed src="../obr\220px-Intel_4004.jpg" > <br></p>
+  <h2>História</h2>
+  <hr>
+  <h3>Prvé čipy</h3>
+  <p>Ako s mnohými technologickými pokrokmi, mikroprocesor bol nápad, ktorého čas nadišiel. Je možné povedať, že tri projekty splodili kompletný mikroprocesor v približne rovnakom čase -- Intel 4004, Texas Instruments TMS 1000 a Garrett AiResearch Central Air Data Computer.
+<br>
+V roku 1968 bolo spoločnosti Garrett ponúknuté, aby vyprodukovala počítač schopný súperiť s elektromechanickými systémami vtedy vo vývoji pre hlavný počítač letovej kontroly novej stíhačky F-14 Tomcat Námorníctva USA. Návrh bol hotový do roku 1970 a ako jadro používal čipovú sadu založenú na MOS. Návrh bol menší a oveľa spoľahlivejší ako mechanické systémy s ktorými súperil a bol použitý vo všetkých raných modeloch Tomcat. Systém však považovalo Námorníctvo za taký vyspelý, že zamietli žiadosť o zverejnenie návrhu a v tom pokračovali až do roku 1997. Z toho dôvodu je CADC a čipset MP944, ktorý používal, pomerne neznáme ešte aj dnes.<br>
+Texas Instruments vyvinuli 4-bitový TMS 1000 a testovali hranice predprogramovaných vložených aplikácií, predstavili verziu zvanú TMS1802NC 17. septembra 1971, ktorá implementovala kalkulačku na čipe. Čip Intelu bol 4-bitový 4004 uvoľnený 15. novembra 1971, ktorý vyvinul Federico Faggin. <br>
+
+TI sa uchádzali o patent na mikroprocesor. Gary Boone dostal patent Patent v USA 3,757,306 za architektúru mikroprocesora na jedinom čipe 4. septembra 1973. Nebude možné nikdy zistiť, ktorá spoločnosť mala v skutočnosti prvý v laboratóriu pracujúci mikroprocesor. V rokoch 1971 aj 1976 sa Intel a TI dali na podpisovanie veľkých vzájomných licenčných patentových dohôd, kedy Intel platil TI za patent na mikroprocesor.
+Tretia strana tvrdí, že jej bol udelený patent, ktorý môže pokrývať „mikroprocesor“.<br>
+Počítač na čipe je variáciou mikroprocesora, ktorá kombinuje jadro mikroprocesora (CPU), nejakú pamäť a I/O (input/output čiže vstupno/výstupné) linky, všetko na jednom čipe. Patent na počítač na čipe, zvaný patent na mikropočítač tej doby, Patent v USA 4,074,351, bol udelený Garymu Booneovi a Michaelovi J. Cochranovi z TI. Mimo tohto patentu je správny význam mikropočítača počítač používajúci (niekoľko) mikroprocesor(ov) ako svoju CPU, kým koncept patentu do istej miery pripomína mikrokontrolér.
+
+Intel uzavrel zmluvu s Computer Terminals Corporation, neskôr zvanou Datapoint, zo San Antonio, Texas, na čip pre terminál, ktorý navrhovali. <br>
+Datapoint sa neskôr rozhodol čip nepoužiť a Intel jo predával ako 8008 v apríli 1972. Toto bol prvý 8-bitový mikroprocesor na svete. Bol základom slávnej počítačovej sady „Mark-8“ reklamovaného v časopise Radio-Electronics v roku 1974. 8008 a jeho nasledovník 8080, otvorili trh s mikroprocesororovými komponentami.</p>
+<embed  src="../obr\ef18b365998027372042dcb8ec47278f-599x687.jpg" >
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

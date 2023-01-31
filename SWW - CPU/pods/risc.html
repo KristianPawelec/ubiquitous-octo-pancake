@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    body {
+      background-color: 	#FAFAD2;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+    h1 {
+      text-align: center;
+    }
+    hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 1px;
+    }
+    p {
+      font-size: 18px;
+    }
+    ul {
+      list-style-type: none;
+      width: 500px;
+      overflow: hidden;
+      border: 1px solid #e7e7e7;
+      background-color: rgb(255,255,153);
+       margin-left: auto;
+        margin-right: auto;
+    }
+
+    li {
+      float: left;
+
+    }
+
+    li a {
+      display: block;
+      color: #666;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: rgb(204,255,255);
+    }
+
+    li a.active {
+      color: white;
+      background-color: rgb(0,102,255);
+    }
+  </style>
+  <body>
+    <h1>Reduced instruction set computer</h1>
+    <hr>
+    <ul>
+      <li><a href="../index.html">Domov</a></li>
+      <li><a href="gpu.html">GPU</a></li>
+      <li><a href="cache.html">Cache</a></li>
+      <li><a href="pods\risc.html" class="active">RISC</a></li>
+      <li><a href="cisc.html">CISC</a></li>
+      <li><a href="micp.html">Mikroprocesor</a></li>
+
+    </ul>
+    <h2>RISC</h2>
+    <p>Reduced instruction set computer, skrátene RISC (doslova počítač s obmedzenou sadou inštrukcií) je architektúra procesorov s priamočiarym vykonávaním pomerne jednoduchých inštrukcií. <br> <br>
+      Pri rozvoji mikroprocesorov, z ktorých mnohé mali mikrokódovú CISC architektúru, a ktorých inštrukčná sada obsahovala aj pomerne zložité inštrukcie, sa ukázalo, že veľká časť zložitejších inštrukcií je využívaná v bežných programoch len zriedkavo. Súčasne sa hľadala aj cesta pre zjednodušenie architektúry procesora, aby bolo možné zmenšiť plochu čipu a tým aj cenu mikroprocesora.
+
+  Aj keď názov naznačuje, že procesor RISC pozná len obmedzené množstvo inštrukcií, nemusí tomu nevyhnutne byť tak. Podstatná je skôr jednoduchá štruktúra inštrukcie a najmä jeho priamočiare vykonávanie, bez mikrokódu. Z toho vyplývajú základné znaky RISC procesorov: <br>
+  <li>väčšina inštrukcií má rovnakú dĺžku</li> <br>
+  <li>väčšina inštrukcií sa vykonáva v jednom inštrukčnom cykle</li> <br>
+  <li>procesor má sadu (niekoľko desiatok) rovnocenných registrov (CISC procesory majú obvykle špecializované registre, napr. <br> akumulátor pre aritmetické operácie, niekoľko špecializovaných registrov pre ukazovatele a pod.)</li> <br>
+  <li>nad dátovou pamäťou nie je možné vykonávať zložitejšie operácie než načítanie a uloženie (tzv. load-store architektúra); tie sú však podporované autoinkrementom/autodekrementom registra slúžiaceho ako ukazovateľ pred/po vykonaní prenosovej inštrukcie.</li> <br> <br>
+ <br>
+Z jednoduchosti architektúry vyplýva aj jednoduchá implementácia moderných prvkov zvyšujúcich výkon procesora, napr. pipelining. <br>
+
+V skutočnosti už niektoré prvotné 8-bitové architektúry vykazovali známky RISC, napr. rodina procesorov 6800/6502.
+</p>
+<embed  src="../obr\RISC-Architecture.jpg" >
+
+
+  </body>
+</html>

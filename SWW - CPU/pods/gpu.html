@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    body {
+      background-color: 	#FAFAD2;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+    h1 {
+      text-align: center;
+    }
+    hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 1px;
+    }
+    p {
+      font-size: 18px;
+    }
+    ul {
+      list-style-type: none;
+      width: 500px;
+      overflow: hidden;
+      border: 1px solid #e7e7e7;
+      background-color: rgb(255,255,153);
+       margin-left: auto;
+        margin-right: auto;
+    }
+
+    li {
+      float: left;
+
+    }
+
+    li a {
+      display: block;
+      color: #666;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: rgb(204,255,255);
+    }
+
+    li a.active {
+      color: white;
+      background-color: rgb(0,102,255);
+    }
+  </style>
+  <body>
+    <h1>Graphics Processing Unit</h1>
+    <hr>
+    <ul>
+      <li><a href="../index.html">Domov</a></li>
+      <li><a href="pods\gpu.html" class="active">GPU</a></li>
+      <li><a href="cache.html">Cache</a></li>
+      <li><a href="risc.html">RISC</a></li>
+      <li><a href="cisc.html">CISC</a></li>
+      <li><a href="micp.html">Mikroprocesor</a></li>
+
+    </ul>
+    <h2>GPU</h2>
+    <p>Grafický procesor  je procesor slúžiaci na výpočet grafických informácií pre zobrazenie údajov z počítača (alebo iného zariadenia spracúvajúceho digitálne dáta) na viditeľný grafický obraz zobraziteľný na monitore. Prevádza digitálne dáta do formy zobraziteľnej pomocou obrazových pixelov. Nachádza sa buď na grafickej karte alebo ako samostatný čip na matičnej doske počítača (vtedy hovoríme o integrovanej grafickej karte). <br>
+
+Úlohou grafického procesora nie je len jednoduché zobrazenie dát, ale aj prepočty virtuálnych trojrozmerných obrazových scén v reálnom čase. Vtedy hovoríme o 3D akcelerátoroch.<br>
+
+GPU vykonáva všetky grafické inštrukcie čím šetrí strojový čas mikroprocesora počítača, a zrýchľuje dostupnosť údajov. Tieto nemusia pri spracovaní v CPU putovať prostredníctvom zbernice do operačnej pamäte a odtiaľ do grafickej karty. V praxi to znamená že v keď sa v programe vyskytne inštrukcia pre spracovanie obrazu, tú nevykoná CPU, ale GPU. <br>
+
+GPU je skutočným procesorom s klasickou architektúrou disponujúcou výkonovými jednotkami (jednotka transformácii, osvetlenia, nastavenia a renderovania). Hlavnou činnosťou moderného GPU je rendering, čiže vizualizácia, tvorba reálneho obrazu na základe počítačového modelu so zohľadnením charakteristík scény a jej okolia. Model (zobrazovaný objekt) je charakterizovaný sieťou alebo drôtovou konštrukciou a je mu priradený definovaný povrch a vzťah k dopadajúcemu svetlu. Scénu charakterizuje umiestnenie svetiel a kamery, okolie farba resp. obraz v pozadí, hmla, vodné a svetelné efekty. Program na základe matematických algoritmov skonštruuje bitmapový obrázok simulujúci resp. napodobujúci reálnu scenériu. GPU potrebuje nielen dostatočne širokú zbernicu, ale aj podporu rýchlej pamäte umožňujúcej zápis a čítanie údajov. <br> Známi výrobcovia AMD (od konca 2010, kedy bola ATI oficiálne zrušená), NVidia, 3DLabs.</p>
+ <embed src="../obr\mining-gpu-e1504211668814-860x430.jpg" ><embed src="../obr/6600GT_GPU.jpg" height="25%" width="25%">
+  </body>
+</html>

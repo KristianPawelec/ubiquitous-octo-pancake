@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    body {
+      background-color: 	#FAFAD2;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+    h1 {
+      text-align: center;
+
+    }
+    hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 1px;
+    }
+    p {
+      font-size: 18px;
+    }
+    ul {
+      list-style-type: none;
+      width: 500px;
+      overflow: hidden;
+      border: 1px solid #e7e7e7;
+      background-color: rgb(255,255,153);
+       margin-left: auto;
+        margin-right: auto;
+    }
+
+    li {
+      float: left;
+
+
+    }
+
+    li a {
+      display: block;
+      color: #666;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: rgb(204,255,255);
+    }
+
+    li a.active {
+      color: white;
+      background-color: rgb(0,102,255);
+    }
+  </style>
+  <body>
+    <h1>Cache</h1>
+    <hr>
+    <ul>
+      <li><a href="../index.html" >Domov</a></li>
+      <li><a href="gpu.html">GPU</a></li>
+      <li><a href="pods\cache.html" class="active">Cache</a></li>
+      <li><a href="risc.html">RISC</a></li>
+      <li><a href="cisc.html">CISC</a></li>
+      <li><a href="micp.html">Mikroprocesor</a></li>
+
+    </ul>
+    <h2>Rýchla vyrovnávacia pamäť procesora</h2>
+    <p>Rýchla vyrovnávacia pamäť procesora je rýchla vyrovnávacia pamäť používaná procesorom počítača na zníženie priemernej doby prístupu do hlavnej pamäte. Vyrovnávacia pamäť je menšia a rýchlejšia pamäť, ktorá ukladá kópie najčastejšie používaných dát hlavnej pamäte. V prípade, že sa častejšie využívajú kópie dát z vyrovnávacej pamäte procesora ako z hlavnej pamäte, je priemerná latencia pamäťového prístupu bližšia latencii vyrovnávajúcej pamäte ako latencii hlavnej pamäte. <br>
+
+Diagram napravo zobrazuje dve pamäte – hlavnú pamäť a rýchlu vyrovnávaciu pamäť. V oboch má každé pamäťové miesto priradenú hodnotu (riadok rýchlej vyrovnávacej pamäte, angl. cache line), ktorej veľkosť sa pohybuje podľa rôznych konštrukčných návrhov od 8 do 512 bajtov. Veľkosť riadku RVP je zvyčajne väčšia ako veľkosť bežného prístupu, ktorý sa pohybuje od 1 do 16 bajtov. Každé pamäťové miesto v oboch pamätiach má index – jedinečné číslo určené na označenie tohto miesta. Index pamäťového miesta v hlavnej pamäti sa nazýva adresa. Každé miesto v rýchlej vyrovnávacej pamäti má navyše štítok, ktorý obsahuje index hodnoty hlavnej pamäte, ktorá bola uložená v RVP. V rýchlej vyrovnávacej pamäti procesora sú tieto záznamy nazývané riadkami alebo blokmi RVP. <br>
+
+Keď chce procesor čítať alebo zapisovať na pamäťové miesto v hlavnej pamäti, najprv skontroluje, či je dané pamäťové miesto v cache. To sa dosiahne porovnaním adresy pamäťového miesta so všetkými štítkami v cache, ktoré môžu danú adresu obsahovať. Ak procesor nájde dané pamäťové miesto v cache, hovoríme tomu cache hit, inak hovoríme o cache miss. Po zistení, že sa požadované dáta nachádzajú vo vyrovnávacej pamäti je ešte potrebné overiť ich platnosť, ktorú udáva tzv. valid bit. V prípade cache hitu procesor okamžite prečíta, alebo zapíše údaje do cache line. Pomer prístupov, ktorých výsledkom bol cache hit ku cache miss, nazývame hit rate a je meradlom efektívnosti cache. <br>
+
+V prípade cache miss, väčšina druhov cache alokuje nový záznam, ktorý obsahuje práve zmeškaný tag a kópiu dát z pamäte. Potom je možné sa odkázať na nový záznam ako v prípade cache hit. Cache miss je pomalý, pretože je potrebné preniesť dáta z hlavnej pamäte. Tento prenos spôsobuje zdržanie preto, že hlavná pamäť je omnoho pomalšia ako cache pamäť.</p>
+<embed src="../obr\220px-Vyrovnavacia_pamat.png" width="20%" height="20%">
+  <p>Pretože čítanie z cache je najbežnejšou operáciou, ktorá zaberá viac ako jeden cyklus, opakovaný výskyt od načítania inštrukcie po inštrukciu na ňom závislú predstavuje v dobre navrhnutých procesoroch zvyčajne kritickú cestu, aby dáta v tejto ceste mrhali čo najmenej času pri čakaní na dokončenie cyklu. Výsledkom je, že cache prvej úrovne je najcitlivejším blokom na latenciu z celého čipu. <br>
+
+Najjednoduchšia cache je virtuálne indexovaná priamo mapovaná cache. Virtuálna adresa sa počíta sčítačkou, relevantná časť adresy sa vyberie a použije na indexáciu SRAM, ktorá vráti načítané dáta. Dáta sa zarovnajú do bajtov v bitovom posúvači a odtiaľ sa podajú ďalšej operácii. Nie je potrebná žiadna kontrola štítkov vo vnútornej slučke—v skutočnosti štítky netreba ani čítať. Neskôr v pipeline, ale pred odsunutím inštrukcie načítania, je potrebné prečítať štítok pre načítané dáta a porovnať s virtuálnou adresou, aby sa uistilo, že nastal cache hit. V prípade cache miss sa cache aktualizuje pomocou požadovanej cache a pipeline sa reštartuje. <br>
+
+Asociatívna cache je zložitejšia, pretože je potrebné načítať nejaký štítok, aby sa určilo, ktorý záznam z cache vybrať. N-cestná množinovo asociatívna cache prvej úrovne zvyčajne číta všetkých N možných štítkov a N dát paralelne a potom vyberie dáta priradené danému štítku. L2 cache niekedy šetria energiu tým, že najprv prečítajú štítky, aby sa z dátovej SRAM prečítal iba jeden prvok. <br>
+
+Diagram napravo objasňuje spôsob, akým sa používajú rôzne časti adresy. Adresné bity sú označené v notácii little endian. Diagram zobrazuje SRAM, indexovanie a multiplexovanie pre 4KB, 2-cestnú množinovo asociatívnu, virtuálne indexovanú a virtuálne štítkovanú cache so 64B riadkami, 32b šírkou čítania a 32b virtuálnou adresou.<br>
+
+Pretože cache je 4KB a má 64B riadky, v cache je iba 64 riadkov a čítame dva naraz zo štítkovej SRAM, ktorá má 32 riadkov, každý s párom 21-bitových štítkov. Hoci by na indexáciu štítkov a dátových SRAM mohla byť použitá akákoľvek funkcia bitov 31 až 6 virtuálnej adresy, je najjednoduchšie použiť najmenej významné bity. <br>
+
+Podobne, pretože cache je 4KB a má čítaciu cestu o šírke 4B a pre každý prístup číta dve cesty, dátová SRAM má 512 riadkov o šírke 8 bajtov.<br>
+
+Modernejšia cache my mohla byť 16KB, 4-cestne množinovo asociatívna, virtuálne indexovaná, s virtuálnymi pomôckami (vhints) a fyzicky štítkovaná s 32B riadkami, 32b šírkou čítania a 36b fyzickými adresami. Opakovaný výskyt čítacej cesty by bol veľmi podobný hore uvedenej ceste. Namiesto štítkov by sa čítali vhints a porovnávali s podmnožinou virtuálnych adries. Neskôr v pipeline by sa virtuálne adresy preložili na fyzické pomocou TLB a fyzický štítok by sa prečítal (iba jeden, keďže vhints poskytujú informáciu o ceste pre čítanie). Nakoniec by sa fyzická adresa porovnala s fyzickým štítkom, aby sa určilo, či nastal cache hit. <br>
+
+Niektoré návrhy SPARC vylepšili rýchlosť svojich L1 cache o niekoľko zdržaní hradiel tak, že rozdelili sčítačku virtuálnej adresy do dekóderov SRAM.</p>
+<embed  src="../obr\Multilevel-Cache-Organization-Three-Level-Cache-Organization.png" >
+
+  </body>
+</html>

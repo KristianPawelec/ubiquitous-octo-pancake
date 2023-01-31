@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    body {
+      background-color: 	#FAFAD2;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+    h1 {
+      text-align: center;
+    }
+    hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 1px;
+    }
+    p {
+      font-size: 18px;
+    }
+    ul {
+      list-style-type: none;
+      width: 500px;
+      overflow: hidden;
+      border: 1px solid #e7e7e7;
+      background-color: rgb(255,255,153);
+       margin-left: auto;
+        margin-right: auto;
+    }
+
+    li {
+      float: left;
+
+    }
+
+    li a {
+      display: block;
+      color: #666;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: rgb(204,255,255);
+    }
+
+    li a.active {
+      color: white;
+      background-color: rgb(0,102,255);
+    }
+  </style>
+  <body>
+    <h1>Complex Instruction Set Computer</h1>
+    <hr>
+    <ul>
+      <li><a href="../index.html">Domov</a></li>
+      <li><a href="gpu.html">GPU</a></li>
+      <li><a href="cache.html">Cache</a></li>
+      <li><a href="risc.html">RISC</a></li>
+      <li><a href="pods\cisc.html" class="active">CISC</a></li>
+      <li><a href="micp.html">Mikroprocesor</a></li>
+
+    </ul>
+    <h2>CISC</h2>
+    <p>Complex instruction set computer, skrátene CISC (doslova počítač s rozsiahlou inštrukčnou sadou alebo počítač s úplnou inštrukčnou sadou) je mikroprocesorová architektúra, v ktorej sa každá inštrukcia vykonáva ako viacero operácií mikrokódu v jednom takte procesora (napr. načítanie z pamäti, vykonanie aritmetickej operácie, zapísanie do pamäti). CISC procesory majú preto rozsiahlu sadu pomerne zložitých inštrukcií. <br>
+
+Architektúra CISC je duálnou k architektúre RISC. <br>
+
+Pred tým ako prvé procesory typu RISC uzreli svetlo sveta, mnohí vedci a technici zaoberajúci sa architektúrou počítačov sa snažili preklenúť medzeru medzi vyššími programovacími jazykmi a vtedajšími strojovými jazykmi tým, že do inštrukčnej sady procesorov pridali nové inštrukcie, ako volanie podprogramu (funkcie), inštrukcie cyklov a iné. Takýto prístup umožnil programy, ktoré zaberali podstatne menej pamäte, pretože zložitejšiu funkcionalitu bolo možné dosiahnuť volaním jedinej inštrukcie, čo bol v šesťdesiatych rokoch minulého storočia veľmi dôležité. <br>
+
+Hoci CISC procesory dosiahli svoj cieľ a umožnili používať konštrukcie vyšších programovacích jazykov, ukázalo sa že tieto nie vždy mali za následok zvýšenie výkonnosti. Napríklad, zistilo sa že na jednom konkrétnom type procesora bolo možné zvýšiť výkonnosť použitím sekvencie viacerých jednoduchších inštrukcií namiesto volania podrogramu pomocou jedinej inštrukcie CALL. Navyše, čím väčšími a zložitejšími sa inštrukčné sady procesorov stávali, tým dlhšie trvalo procesoru inštrukciu dekódovať. Taktiež implementácia všetkých týchto inštrukcií vyžadovala väčšie úsilie od návrhárov procesora a taktiež väčšie množstvo tranzistorov v takomto procesore.<br>
+
+V posledných rokoch sa výrobcovia čipov CISC inšpirovali technológiou RISC do tej miery (napr.Intel x86 a AMD procesory), že stále síce podporujú všetky inštrukcie svojich starších typov procesorov (kvôli zachovaniu spätnej kompatibility) avšak jednotlivé inštrukcie sú dekódované do podoby „mikro-operácií“ a tie potom interne vykonávajú podobne ako je to v procesoroch typu RISC. Tým zmenšujú rozdiel medzi „klasickými“ CISC a RISC procesormi. <br>
+
+Tento postup doviedla do dokonalosti spoločnosť Transmeta, ktorá použila pre svoje x86-kompatibilné procesory architektúru VLIW (s veľmi širokým inštrukčným slovom), pričom do interného kódu sa pôvodný binárny kód x86 priebežne prekladá špeciálnym softvérom.</p>
+<embed src="../obr\RISC-Architecture (1).jpg" >
+
+  </body>
+</html>
