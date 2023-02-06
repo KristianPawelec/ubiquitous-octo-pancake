@@ -1,32 +1,4 @@
-<?php
 
-if(isset($_POST['insert']))
-{
-    $hostname = "localhost";
-    $username = "root";
-    $password = "";
-    $databaseName = "firma";
-    
-  
-    $id = $_POST['id'];
-    $meno = $_POST['meno'];
-    $priezvisko = $_POST['priezvisko'];
-    $vek = $_POST['vek'];
-    $pohlavie = $_POST['pohlavie'];
-    
-  
-
-    $connect = mysqli_connect($hostname, $username, $password, $databaseName);
-    
-   
-
-    $query = "INSERT INTO `zamestnanci`('id', `meno`, `priezvisko`, `vek`, 'pohlavie') 
-    VALUES ('$id','$meno','$priezvisko','$vek', '$pohlavie')";
-    
-    $result = mysqli_query($connect,$query);
-    
-}
-?>
 <!DOCTYPE html>
 <html>
 
@@ -37,20 +9,30 @@ if(isset($_POST['insert']))
     </head>
 
     <body>
-        <form action="pridat.php" method="post">
-            <input type="number" name="id" required placeholder="id"><br><br>
+    <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "firma";
 
-            <input type="text" name="meno" required placeholder="meno"><br><br>
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
 
-            <input type="text" name="priezvisko" required placeholder="priezvisko"><br><br>
+$sql = "INSERT INTO zamestnanci (id, meno, priezvisko, vek, pohlavie)
+VALUES ('5', 'Kristian', 'Pawelec', '21', 'muz')";
 
-            <input type="number" name="vek" required placeholder="vek" min="10" max="100"><br><br>
+if (mysqli_query($conn, $sql)) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
 
-            <input type="text" name="pohlavie" required placeholder="pohlavie"><br><br>
-
-            <input type="submit" name="insert" value="Add Data To Database">
-
-        </form>
+mysqli_close($conn);
+?>
 
     </body>
 
