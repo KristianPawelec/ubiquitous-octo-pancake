@@ -13,24 +13,17 @@ $dbname = "firma";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+  die("Connection failed: " . $conn->connect_error);
 }
 
-$id = $_POST["id"];
-$meno = $_POST["meno"];
-$priezvisko = $_POST["priezvisko"];
-$vek = $_POST["vek"];
-$pohlavie = $_POST["pohlavie"];
-
-$sql = "UPDATE zamestnanci SET id='$id', meno='$meno', priezvisko='$priezvisko', vek='$vek', pohlavie='pohlavie' WHERE id=$id";
+$sql = "UPDATE zamestnanci SET priezvisko='Nováková' WHERE id=2";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Employee information updated successfully";
+  echo "Record updated successfully";
 } else {
-    echo "Error updating record: " . $conn->error;
+  echo "Error updating record: " . $conn->error;
 }
 
 $conn->close();
