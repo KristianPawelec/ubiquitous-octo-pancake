@@ -1,0 +1,76 @@
+/* CSS Document */
+body {
+  background-color: #FFE4C4; /* Changed background color */
+}
+
+.obs {
+  text-align: left; /* Changed text alignment */
+}
+
+h1 {
+  text-align: center; /* Changed text alignment */
+  font-style: italic;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold; /* Added font-weight */
+}
+
+p {
+  margin-left: 10%; /* Decreased margin-left */
+  margin-right: 10%; /* Decreased margin-right */
+}
+
+div.gallery {
+  margin: 8px; /* Slightly increased margin */
+  border: 2px solid #999; /* Changed border color and width */
+  float: left;
+  width: 35%; /* Slightly increased width */
+  height: auto;
+}
+
+div.gallery:hover {
+  border: 2px solid #555; /* Changed border color on hover */
+}
+
+/* Keeping image attributes the same */
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 10px; /* Decreased padding */
+  text-align: justify; /* Changed text alignment */
+}
+
+ul {
+  list-style-type: none; /* Changed list style type */
+  width: 80%;
+  overflow: hidden;
+  border: 2px solid #e7e7e7; /* Increased border width */
+  background-color: rgb(255, 204, 204); /* Changed background color */
+  margin: 0 auto;
+}
+
+li {
+  float: left; /* Changed float direction */
+}
+
+li a {
+  display: inline-block; /* Changed to inline-block */
+  color: #333; /* Changed text color */
+  text-align: center;
+  padding: 10px 14px; /* Adjusted padding */
+  text-decoration: underline; /* Changed text decoration */
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(204, 255, 204); /* Changed background color on hover */
+}
+
+li a.active {
+  color: #fff;
+  background-color: rgb(0, 51, 102);
+}
